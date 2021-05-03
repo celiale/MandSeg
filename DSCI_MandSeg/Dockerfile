@@ -20,7 +20,7 @@ apt-get install -y python3.7 && \
 apt-get install -y python3-pip && \
 pip3 install tensorflow Pillow
 
-COPY ./unet_model_XV_5_20.hdf5 .
+RUN wget https://github.com/celiale/MandSeg/releases/download/v1.0/unet_model_XV_5_20.hdf5
 RUN mkdir /app/src
 WORKDIR /app/src
 COPY ./src/ .
