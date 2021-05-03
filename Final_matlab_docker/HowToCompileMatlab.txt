@@ -1,0 +1,17 @@
+	How to use a Matlab code as a standalone application 
+
+
+1. download and install Matlab Runtime on your machine with corresponding version:
+	-download version here : https://www.mathworks.com/products/compiler/matlab-runtime.html
+	-how to install non-interactively here : https://www.mathworks.com/help/compiler_sdk/dotnet/install-the-matlab-runtime.html
+
+2. compile your code in Matlab using the command : mcc -m -R -nodisplay YourScript.m,
+		-an executable “YourScript” is created
+
+
+3. define the environment variable LD_LIBRARY_PATH as shown in the readme created during the compilation.
+
+
+Tips for deployment on DSCI :
+	The DSCI on AWS is a linux machine, so the code should be compiled on a linux machine.
+	if you don't have one with Matlab installed, try doing the compilation on GreatLakes, that's what I did for TMJSeg.m
